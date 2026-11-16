@@ -1,4 +1,4 @@
-// Source: Patrick's Upwork profile, read on 2026-11-16. No employment dates or metrics supplied.
+// Profile source: Upwork, read 2026-11-16. Employment dates supplied directly by Patrick in chat.
 export const profile = {
   name: 'Patrick Lai',
   upwork: 'https://www.upwork.com/freelancers/~01f362eba5eb38d117',
@@ -6,10 +6,10 @@ export const profile = {
   email: 'pakilai0715@gmail.com',
 };
 export const experiences = [
-  { period: '', company: 'Freelance', role: 'Freelance Web Developer', description: 'Web applications, Shopify themes, and workflow integrations with n8n, Zapier, or custom APIs.' },
-  { period: '', company: 'JD', role: 'Front-End Developer', description: 'Front-end engineering experience at JD, working on established products.' },
-  { period: '', company: 'SHEIN', role: 'Front-End Developer', description: 'Front-end engineering experience at SHEIN. My portfolio includes its global e-commerce experience for desktop and PWA.' },
-  { period: '', company: 'uCloudlink', role: 'Front-End Developer', description: 'Previous front-end development role at uCloudlink.' },
+  { period: 'September 2025 - Present', company: 'Freelance', role: 'Freelance Web Developer', description: 'Web applications, Shopify themes, and workflow integrations with n8n, Zapier, or custom APIs.' },
+  { period: 'September 2021 - September 2025', company: 'JD', role: 'Front-End Developer', description: 'Front-end engineering experience at JD, working on established products.' },
+  { period: 'August 2019 - September 2021', company: 'SHEIN', role: 'Front-End Developer', description: 'Front-end engineering experience at SHEIN. My portfolio includes its global e-commerce experience for desktop and PWA.' },
+  { period: 'July 2015 - August 2019', company: 'uCloudlink', role: 'Front-End Developer', description: 'Previous front-end development role at uCloudlink.' },
 ];
 export const gallery: {title:string; image?:string; tags:string[]}[] = [
   { title: 'SHEIN Global Fast-fashion E-commerce (PC & PWA)', image: '/images/shein.jpg', tags: ['Vue.js', 'Node.js', 'ExpressJS', 'SCSS'] },
