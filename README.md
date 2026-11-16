@@ -40,3 +40,9 @@ The experience section separates the four employment records from the project-im
 Reading progress uses cat paw prints. In a browser's first visit, reaching the actual page bottom displays confetti and `Thanks for watching` for three seconds. `localStorage` records the visit, so subsequent visits do not replay it; clearing site storage starts a new first visit. Reduced motion removes the moving confetti. If browser storage is unavailable, first-visit persistence cannot be guaranteed.
 
 Run `node scripts/verify-profile.cjs` with Chrome and the local server running to check the profile-specific interactions.
+
+## Visual Update
+
+Removed the separate case-study section. Three Upwork portfolio titles appear in the gallery; the CRM thumbnail remains explicitly pending. Employer descriptions were removed and the company names link to their websites. The profile avatar is Patrick's supplied artwork, shown uncropped inside a circular thumbnail. Desktop content is capped at 1120px.
+
+Technology icons are from Simple Icons (https://simpleicons.org/); company icons are website favicons. Brand marks belong to their respective owners. The pink reading paws use #BE728C and stay hidden until their scroll threshold. The first-visit celebration retains its three-second duration but displays only a bottom-left party popper and confetti. Contact includes a CSS phone vibration illustration. Reduced-motion settings disable movement.
