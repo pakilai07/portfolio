@@ -1,52 +1,52 @@
 
 perf out/index.html @ 1440px
-  PASS  host CPU load (before/after)               15/16 %        
-  PASS  total transfer                             281.9 KiB      html 6.1K  css 8.6K  js 137.6K  img 109.5K  other 20K
-  PASS  requests                                   27             14 by load
-  PASS  images bytes                               109.5 KiB      5 files
-  PASS  largest image                              67.8 KiB       images/shein-thumb.webp
-  WARN  JS parsed                                  453.3 KiB      7 files, 137.6K gz
-  PASS  CSS                                        8.6 KiB        1 files
-  PASS  font families                              0              
+  PASS  host CPU load (before/after)               20/16 %
+  PASS  total transfer                             458.4 KiB      html 7.5K  css 11K  js 146.3K  img 271.3K  other 22.3K
+  PASS  requests                                   40             18 by load
+  PASS  images bytes                               271.3 KiB      13 files
+  PASS  largest image                              129.8 KiB      images/shein.jpg
+  WARN  JS parsed                                  472.4 KiB      11 files, 146.3K gz
+  PASS  CSS                                        11 KiB         2 files
+  PASS  font families                              0
   PASS  font files                                 0              0K
-  PASS  images without width+height                0              
-  PASS  below-fold images not lazy                 0              
-  PASS  oversized images (natural > 2.2x shown)    0              
-  PASS  WebGL live at load                         0              
-  PASS  WebGL live at bottom                       0              
+  PASS  images without width+height                0
+  PASS  below-fold images not lazy                 0
+  PASS  oversized images (natural > 2.2x shown)    0
+  PASS  WebGL live at load                         0
+  PASS  WebGL live at bottom                       0
   PASS  WebGL peak live                            0              0 contexts made in all
   PASS  long tasks                                 0              runs 3, 0..0, max 0ms
   PASS  blocking time                              0 ms           runs 3, 0..0 ms; at load 0ms
-  PASS  FCP (CPU, relative)                        72 ms          runs 3, 36..80
-  PASS  LCP (CPU, relative)                        72 ms          runs 3, 36..80, span.wordmark
+  PASS  FCP (CPU, relative)                        80 ms          runs 3, 56..84
+  PASS  LCP (CPU, relative)                        80 ms          runs 3, 56..84, span.wordmark
   PASS  layout shift                               0.000          runs 3, 0.000..0.000; at load 0.000
-  PASS  modules loaded, never mounted              0              
-  PASS  broken requests                            0              
-  PASS  page height                                5.8 screens    DOM 194 nodes
+  PASS  modules loaded, never mounted              0
+  PASS  broken requests                            0
+  PASS  page height                                8 screens      DOM 287 nodes
 
 perf out/index.html @ 390px
-  PASS  host CPU load (before/after)               15/16 %        
-  PASS  total transfer                             281.9 KiB      html 6.1K  css 8.6K  js 137.6K  img 109.5K  other 20K
-  PASS  requests                                   27             12 by load
-  PASS  images bytes                               109.5 KiB      5 files
-  PASS  largest image                              67.8 KiB       images/shein-thumb.webp
-  WARN  JS parsed                                  453.3 KiB      7 files, 137.6K gz
-  PASS  CSS                                        8.6 KiB        1 files
-  PASS  font families                              0              
+  PASS  host CPU load (before/after)               20/16 %
+  PASS  total transfer                             473.3 KiB      html 7.5K  css 11K  js 146.3K  img 286.2K  other 22.3K
+  PASS  requests                                   41             21 by load
+  PASS  images bytes                               286.2 KiB      14 files
+  PASS  largest image                              129.8 KiB      images/shein.jpg
+  WARN  JS parsed                                  472.4 KiB      11 files, 146.3K gz
+  PASS  CSS                                        11 KiB         2 files
+  PASS  font families                              0
   PASS  font files                                 0              0K
-  PASS  images without width+height                0              
-  PASS  below-fold images not lazy                 0              
-  PASS  oversized images (natural > 2.2x shown)    0              
-  PASS  WebGL live at load                         0              
-  PASS  WebGL live at bottom                       0              
+  PASS  images without width+height                0
+  PASS  below-fold images not lazy                 0
+  WARN  oversized images (natural > 2.2x shown)    1              shein.jpg 1000px for 350
+  PASS  WebGL live at load                         0
+  PASS  WebGL live at bottom                       0
   PASS  WebGL peak live                            0              0 contexts made in all
   PASS  long tasks                                 0              runs 3, 0..0, max 0ms
   PASS  blocking time                              0 ms           runs 3, 0..0 ms; at load 0ms
-  PASS  FCP (CPU, relative)                        68 ms          runs 3, 56..84
-  PASS  LCP (CPU, relative)                        68 ms          runs 3, 56..84, span.wordmark
+  PASS  FCP (CPU, relative)                        44 ms          runs 3, 40..44
+  PASS  LCP (CPU, relative)                        44 ms          runs 3, 40..44, span.wordmark
   PASS  layout shift                               0.000          runs 3, 0.000..0.000; at load 0.000
-  PASS  modules loaded, never mounted              0              
-  PASS  broken requests                            0              
-  PASS  page height                                8.4 screens    DOM 195 nodes
+  PASS  modules loaded, never mounted              0
+  PASS  broken requests                            0
+  PASS  page height                                10.3 screens   DOM 287 nodes
 
-SUMMARY out/index.html: 0 FAIL, 2 WARN  -> WARN
+SUMMARY out/index.html: 0 FAIL, 3 WARN  -> WARN

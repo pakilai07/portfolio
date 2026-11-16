@@ -3,6 +3,7 @@ import './globals.css';
 import { Analytics } from '@/components/analytics';
 
 export const metadata: Metadata = {
+  other: { 'page-type': 'service', 'site-kind': 'other' },
   metadataBase: new URL('https://portfolio.patricklai.workers.dev'),
   title: 'Patrick Lai | Web Developer',
   description: 'Web applications, Shopify development and workflow automation by Patrick Lai. Review project work and discuss your requirements on Upwork.',
@@ -10,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}<Analytics/></body></html>;
+  return <html lang="en" data-type="service"><body>{children}<Analytics/></body></html>;
 }

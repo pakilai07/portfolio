@@ -1,0 +1,22 @@
+[
+  {
+    "check": "placeholder",
+    "target": "div.grid.v2-projects > article.card.v2-project:nth-of-type(1) > div.v2-actions > span.v2-p",
+    "reason": "Owner explicitly requested visible placeholder statements and empty demo URL data on 2026-11-16. Missing project claims must not be fabricated."
+  },
+  {
+    "check": "copy-headings",
+    "target": "div.wrap > div.grid.v2-projects > article.card.v2-project:nth-of-type(1) > h3",
+    "reason": "These headings are the verified project titles, employer names and requested service names. Rewriting proper names to satisfy a noun heuristic would reduce factual accuracy."
+  },
+  {
+    "check": "no-visual",
+    "target": "section#services",
+    "reason": "This service overview uses real vendor icons and concrete deliverables. Its smaller logos are intentional; unrelated stock photographs or inflated brand marks would not add truthful evidence of the services."
+  },
+  {
+    "check": "card-layout",
+    "target": "section#services > div.wrap.section > div.grid.v2-services",
+    "reason": "Four equally scoped services deliberately share one accessible card system. Distinct vendor icons and deliverables distinguish them; forcing decorative variations would impair comparison and violate the agreed restrained design."
+  }
+]
