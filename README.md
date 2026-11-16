@@ -58,3 +58,9 @@ Workers Builds settings:
 - Project root: repository root
 
 The build writes deployable HTML, JavaScript, CSS and images to `out/`. `.next/` is not the deployment directory. Keep the Worker name `portfolio` aligned with the connected Workers project. Push the configuration commit and retry the failed build using the latest commit. If server-side features are added later, reassess the deployment adapter before removing static export.
+
+## V2 Branch
+
+Current V2 handoff: [docs/v2/delivery.md](docs/v2/delivery.md). This supersedes the V1 interaction checks above. Build with `npm run build`, preview exported files with `npm start`. Upwork-specific entry: `/upwork/`. Run `PORT=3100 npm start` before `npm run test:v2` and `npm run test:analytics`; `npm run test:worker` needs no server. The old verify.cjs / verify-profile.cjs scripts describe V1 and are not the V2 acceptance suite.
+
+V2 preserves static-export asset delivery while adding the narrowly routed `/api/events` Worker endpoint and Analytics Engine binding. Production deployment requires owner approval. See the delivery document for the Web Analytics hostname, data collected, current design-gate findings and missing project content.

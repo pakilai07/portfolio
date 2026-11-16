@@ -5,3 +5,6 @@ out/
 .env*
 !.env.example
 test-results/
+.taste-skill/chrome*/
+
+.taste-skill/

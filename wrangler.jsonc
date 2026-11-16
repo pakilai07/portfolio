@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
   "name": "portfolio",
+  "main": "workers/site.ts",
   "compatibility_date": "2026-11-16",
-  "assets": {
-    "directory": "./out"
-  }
+  "assets": { "directory": "./out", "binding": "ASSETS", "run_worker_first": ["/api/events"] },
+  "analytics_engine_datasets": [{ "binding": "PORTFOLIO_EVENTS", "dataset": "portfolio_events" }]
 }
