@@ -14,7 +14,7 @@ export const experiences = [
 export const gallery: {title:string; image?:string; tags:string[]}[] = [
   { title: 'SHEIN Global Fast-fashion E-commerce (PC & PWA)', image: '/images/shein.jpg', tags: ['Vue.js', 'Node.js', 'ExpressJS', 'SCSS'] },
   { title: 'Human Resources Management System', image: '/images/hr-management.jpg', tags: ['React', 'Next.js', 'OpenAPI', 'Tailwind CSS'] },
-  { title: 'Customer Relationship Management System', tags: [] },
+  { title: 'Customer Relationship Management System', image: '/images/crm.jpg', tags: ['React', 'Tailwind CSS', 'Next.js', 'PostgreSQL'] },
 ];
 export const stack = [
   { group: '01 / FRONTEND', title: 'Frontend', items: ['React', 'Vue.js', 'Next.js', 'TypeScript', 'Tailwind CSS'], symbol: '</>' },
