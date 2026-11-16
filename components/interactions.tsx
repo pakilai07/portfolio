@@ -5,11 +5,7 @@ import { experiences, gallery } from '@/lib/content';
 
 const companySites: Record<string, {url:string; icon:string}> = {JD:{url:'https://www.jd.com/',icon:'jd'},SHEIN:{url:'https://www.shein.com/',icon:'shein'},uCloudlink:{url:'https://www.ucloudlink.com/',icon:'ucloudlink'}};
 
-function Paw() {
-  return <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="6" cy="7" rx="2.2" ry="3" transform="rotate(-25 6 7)"/><ellipse cx="11" cy="4.5" rx="2.1" ry="3"/><ellipse cx="16" cy="6" rx="2.1" ry="3" transform="rotate(20 16 6)"/><ellipse cx="20" cy="10" rx="2" ry="2.7" transform="rotate(35 20 10)"/><path d="M6 17c0-3 4-7 7-6s6 5 5 8-4 1-6 1-6 1-6-3Z"/></svg>;
-}
 export function ReadingProgress() {
-  const [progress, setProgress] = useState(0);
   const [celebrate, setCelebrate] = useState(false);
   const eligible = useRef(false);
   const shown = useRef(false);
@@ -23,8 +19,6 @@ export function ReadingProgress() {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         const max = document.documentElement.scrollHeight - window.innerHeight;
-        const percentage = max <= 0 ? 0 : Math.max(0, Math.min(100, Math.round(window.scrollY / max * 100)));
-        setProgress(percentage);
         if (max > 0 && window.scrollY >= max - 2 && eligible.current && !shown.current) {
           shown.current = true; setCelebrate(true); timer = setTimeout(() => setCelebrate(false), 3000);
         }
@@ -34,7 +28,7 @@ export function ReadingProgress() {
     window.addEventListener('scroll', update, { passive: true }); window.addEventListener('resize', update);
     return () => { clearTimeout(timer); cancelAnimationFrame(frame); observer.disconnect(); window.removeEventListener('scroll', update); window.removeEventListener('resize', update); };
   }, []);
-  return <><div className="reading-progress"><div role="progressbar" aria-label="Page reading progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress} className="paw-track">{Array.from({length:24},(_,i)=><span key={i} className={progress >= (i+1)/24*100 ? 'paw filled' : 'paw'}><Paw /></span>)}</div></div>{celebrate && <div className="celebration" role="status" aria-label="Celebration"><div className="confetti" aria-hidden="true">{Array.from({length:40},(_,i)=><i key={i} style={{'--x':`${(i*37)%100}vw`,'--rotation':`${i*43}deg`,'--delay':`${i%6*.06}s`,'--color':['#c5ed87','#e8b75e','#f4eee0','#89b8ae'][i%4]} as React.CSSProperties}/>)}</div><span className="confetti-cannon" aria-hidden="true">🎉</span></div>}</>;
+  return <>{celebrate && <div className="celebration" role="status" aria-label="Celebration"><div className="confetti" aria-hidden="true">{Array.from({length:40},(_,i)=><i key={i} style={{'--x':`${(i*37)%100}vw`,'--rotation':`${i*43}deg`,'--delay':`${i%6*.06}s`,'--color':['#c5ed87','#e8b75e','#f4eee0','#89b8ae'][i%4]} as React.CSSProperties}/>)}</div><span className="confetti-cannon" aria-hidden="true">🎉</span></div>}</>;
 }
 
 export function ExperienceCarousel() {
