@@ -1,4 +1,4 @@
-# Pakilai portfolio
+# Patrick Lai Portfolio
 
 Next.js App Router + React + TypeScript + Tailwind CSS 4. Responsive English portfolio with a reading progress bar, touch/keyboard experience carousel, CSS toolkit animations, case studies and a four-step collaboration process.
 
@@ -30,3 +30,13 @@ The carousel uses native touch scrolling, arrow buttons, dots and arrow-key navi
 With Google Chrome installed and `npm start` running, execute `node scripts/verify.cjs`. It checks 320, 390, 768, 1024 and 1440px widths, horizontal overflow, progress endpoints, carousel buttons/dots/wrapping, and browser runtime errors. Screenshots are saved to the system temporary directory. These checks and production build/type checking passed on 2026-11-16. Touch scrolling and normal-motion appearance still merit testing on a physical phone.
 
 Builds explicitly use webpack because Turbopack's PostCSS worker could not bind a port in the original development environment.
+
+## Profile Update (2026-11-16)
+
+Identity, contact links, employment titles, technology list and four-step process now come from Patrick Lai's Upwork profile and the contact details provided in chat. Employment dates and detailed role responsibilities were not returned by Upwork and are not invented. Public portfolio images for SHEIN and the Human Resources Management System are stored in `public/images/`. Other employment images and detailed case-study evidence are still awaiting Patrick's materials.
+
+The experience section separates the four employment records from the project-image gallery, so project screenshots are not attributed to unrelated employers. Gallery images use square frames. The active gallery item advances every three seconds only while the gallery is visible; hover, keyboard focus, the pause control, a hidden browser tab or reduced-motion preferences suspend playback.
+
+Reading progress uses cat paw prints. In a browser's first visit, reaching the actual page bottom displays confetti and `Thanks for watching` for three seconds. `localStorage` records the visit, so subsequent visits do not replay it; clearing site storage starts a new first visit. Reduced motion removes the moving confetti. If browser storage is unavailable, first-visit persistence cannot be guaranteed.
+
+Run `node scripts/verify-profile.cjs` with Chrome and the local server running to check the profile-specific interactions.
