@@ -3,7 +3,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Patrick Lai | Web Developer',
-  description: 'Web development portfolio of Patrick Lai. View project case studies and get in touch through Upwork.',
+  description: 'Web applications, Shopify development and workflow automation by Patrick Lai. Review project work and discuss your requirements on Upwork.',
+  openGraph: { title: 'Patrick Lai | Web Apps And Shopify Development', description: '10+ years of development experience. Web apps, business dashboards, Shopify and workflow automation.' },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
