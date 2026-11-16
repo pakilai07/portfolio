@@ -9,7 +9,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. Production: `npm run build` then `npm start`. Type checking: `npm run typecheck`.
+Open http://localhost:3000. Static production build: `npm run build`; deploy the resulting `out/` directory. Use `npm run dev` for local development. `next start` is not compatible with static export. Type checking: `npm run typecheck`.
 
 ## Personalize before publishing
 
@@ -46,3 +46,15 @@ Run `node scripts/verify-profile.cjs` with Chrome and the local server running t
 Removed the separate case-study section. Three Upwork portfolio titles appear in the gallery; the CRM thumbnail remains explicitly pending. Employer descriptions were removed and the company names link to their websites. The profile avatar is Patrick's supplied artwork, shown uncropped inside a circular thumbnail. Desktop content is capped at 1120px.
 
 Technology icons are from Simple Icons (https://simpleicons.org/); company icons are website favicons. Brand marks belong to their respective owners. The pink reading paws use #BE728C and stay hidden until their scroll threshold. The first-visit celebration retains its three-second duration but displays only a bottom-left party popper and confetti. Contact includes a CSS phone vibration illustration. Reduced-motion settings disable movement.
+
+## Cloudflare Workers Deployment
+
+The site uses Next.js static export (`next.config.ts`) and Workers Static Assets (`wrangler.jsonc`). It does not require OpenNext or a server runtime.
+
+Workers Builds settings:
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy` (existing setting is compatible)
+- Project root: repository root
+
+The build writes deployable HTML, JavaScript, CSS and images to `out/`. `.next/` is not the deployment directory. Keep the Worker name `portfolio` aligned with the connected Workers project. Push the configuration commit and retry the failed build using the latest commit. If server-side features are added later, reassess the deployment adapter before removing static export.
