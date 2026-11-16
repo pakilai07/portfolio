@@ -17,9 +17,10 @@ export const gallery: {title:string; image?:string; tags:string[]}[] = [
   { title: 'Customer Relationship Management System', tags: [] },
 ];
 export const stack = [
-  { group: '01 / INTERFACE', title: 'Frontend', items: ['React', 'Vue.js', 'Next.js', 'TypeScript', 'Tailwind CSS'], symbol: '</>' },
-  { group: '02 / WEB PLATFORMS', title: 'Web Platforms', items: ['Node.js', 'ExpressJS', 'Shopify Liquid', 'WordPress'], symbol: '{ }' },
-  { group: '03 / AUTOMATION', title: 'Automation', items: ['Python', 'n8n', 'Zapier', 'Make', 'Custom APIs'], symbol: '' },
+  { group: '01 / FRONTEND', title: 'Frontend', items: ['React', 'Vue.js', 'Next.js', 'TypeScript', 'Tailwind CSS'], symbol: '</>' },
+  { group: '02 / BACKEND', title: 'Backend & APIs', items: ['Node.js', 'ExpressJS', 'Python', 'Custom APIs'], symbol: '{ }' },
+  { group: '03 / COMMERCE', title: 'E-commerce & CMS', items: ['Shopify Liquid', 'WordPress'], symbol: '▤' },
+  { group: '04 / AUTOMATION', title: 'Workflow Automation', items: ['n8n', 'Zapier', 'Make'], symbol: '⚙' },
 ];
 export const steps = [
   { title: 'Discovery', text: 'I review your Figma designs, requirements, or existing codebase, and we align on scope, timeline, and success criteria for the finished work.' },
