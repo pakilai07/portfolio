@@ -71,15 +71,15 @@ html{scroll-behavior:auto}.v2-hero{padding-right:0}.v2-hero h1,.v2-hero .v2-lead
 /* Match disclosure visibility explicitly across browser layout engines. */
 .project-description:not([open])>:not(summary),.v2-faq details:not([open])>p{display:none}
 @media(min-width:768px) and (max-width:1099px){.v2-header{position:absolute;top:0;left:0;right:0;z-index:5}.v2-hero{height:100svh;min-height:100svh;padding-top:140px;padding-bottom:40px}.v2-hero h1,.v2-hero .v2-lead{max-width:56%}.v2-hero h1{font-size:42px;margin-block:15px}.v2-hero .v2-lead{font-size:16px;line-height:1.65;margin-block:8px}.v2-hero .hero-proof{position:absolute;top:100px;right:0;width:40%;max-width:none;height:auto;margin:0}.v2-hero .hero-proof img{height:auto}.v2-hero .v2-note{max-width:56%}}
-/* Mobile sections use the same content-driven spacing as experience. */
-@media(max-width:767px){
-  .portfolio-main>section:not(.v2-hero){height:auto;min-height:0!important;padding-block:0}
-  .portfolio-main>section.section:not(.v2-hero),
-  .portfolio-main>section>.wrap.section{padding-block:65px}
-  .portfolio-main>section>.wrap>.eyebrow:first-child{margin-top:0}
-  .v2-projects,.v2-services{min-height:0;align-content:start}
-  .portfolio-main>section:last-child>.wrap{min-height:0}
-  .faq-cta{margin-top:28px}
-  .closing{height:auto;min-height:0;padding-block:65px}
-}
-@media(max-width:767px){.portfolio-main>#projects.section{padding-block:65px}}
+/* One section-spacing scale per device; hero keeps its header clearance. */
+:root{--section-space:110px}
+@media(max-width:767px){:root{--section-space:65px}}
+.portfolio-main>section:not(.v2-hero){height:auto;min-height:0!important;padding-block:0}
+.portfolio-main>section.section:not(.v2-hero),
+.portfolio-main>#projects.section,
+.portfolio-main>section>.wrap.section{padding-block:var(--section-space)}
+.portfolio-main>section>.wrap>.eyebrow:first-child{margin-top:0}
+.v2-projects,.v2-services{min-height:0;align-content:start}
+.portfolio-main>section:last-child>.wrap{min-height:0}
+.faq-cta{margin-top:28px}
+.closing{height:auto;min-height:0;padding-block:var(--section-space)}
