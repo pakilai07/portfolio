@@ -82,3 +82,4 @@ html{scroll-behavior:auto}.v2-hero{padding-right:0}.v2-hero h1,.v2-hero .v2-lead
   .faq-cta{margin-top:28px}
   .closing{height:auto;min-height:0;padding-block:65px}
 }
+@media(max-width:767px){.portfolio-main>#projects.section{padding-block:65px}}
